@@ -1,4 +1,5 @@
-#include "dommodel.h"
+//#include "dommodel.h"
+#include "materialdommodel.h"
 #include "mainwindow.h"
 
 #include <QDomDocument>
@@ -12,7 +13,8 @@ MainWindow::MainWindow() : QMainWindow(), model(0)
     fileMenu->addAction(tr("&Open..."), this, &MainWindow::openFile, QKeySequence::Open);
     fileMenu->addAction(tr("E&xit"), this, &QWidget::close, QKeySequence::Quit);
 
-    model = new DomModel(QDomDocument(), this);
+    //model = new DomModel(QDomDocument(), this);
+    model = new MaterialDomModel(QDomDocument(), this);
     view = new QTreeView(this);
     view->setModel(model);
 
@@ -36,7 +38,8 @@ void MainWindow::openFile()
             if (document.setContent(&file))
             {
                 //documentからDomModelを生成
-                DomModel *newModel = new DomModel(document, this);
+                //DomModel *newModel = new DomModel(document, this);
+                MaterialDomModel *newModel = new MaterialDomModel(document, this);
 
                 //ツリービューにデータ登録
                 view->setModel(newModel);

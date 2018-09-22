@@ -1,10 +1,12 @@
 HEADERS     = domitem.h \
               dommodel.h \
-              mainwindow.h
+              mainwindow.h \
+    materialdommodel.h
 SOURCES     = domitem.cpp \
               dommodel.cpp \
               main.cpp \
-              mainwindow.cpp
+              mainwindow.cpp \
+    materialdommodel.cpp
 QT      += xml widgets
 requires(qtConfig(filedialog))
 
