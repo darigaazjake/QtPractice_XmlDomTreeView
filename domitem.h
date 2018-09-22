@@ -77,7 +77,7 @@ private:
     //親ノードのポインタ
     DomItem *parentItem;
 
-    //番号
+    //TreeModelのrow番号(0から)
     int rowNumber;
 };
 
