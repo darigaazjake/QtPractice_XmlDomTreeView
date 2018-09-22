@@ -5,6 +5,9 @@
 
 class MaterialDomModel : public DomModel
 {
+public slots:
+    void clickedItem(const QModelIndex&);
+
 public:
     MaterialDomModel(QDomDocument document, QObject *parent=0);
 

@@ -74,3 +74,13 @@ QVariant MaterialDomModel::data(const QModelIndex &index, int role) const
             return QVariant();
     }
 }
+
+void clickedItem(const QModelIndex &index)
+{
+    //indexが指すノードを取り出す
+    DomItem *item = static_cast<DomItem*>(index.internalPointer());
+    QDomNode node = item->node();
+
+    //QWidget temp();
+
+}
