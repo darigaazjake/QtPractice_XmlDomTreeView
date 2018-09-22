@@ -71,9 +71,16 @@ public slots:
     void openFile();
 
 private:
+    //読み込んだDOM
     DomModel *model;
-    QMenu *fileMenu;
+
+    //ファイルパス 次のダイアログ起点として使うため保存
     QString xmlPath;
+
+    //GUIパーツメニューバー
+    QMenu *fileMenu;
+
+    //GUIパーツ  表示用のツリービュー
     QTreeView *view;
 };
 
